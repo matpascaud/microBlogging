@@ -10,29 +10,26 @@ import Foundation
 
 protocol ApiResource {
     associatedtype Model:Decodable
-    //var baseUrl: String { get }
+    var baseUrl: String { get }
     var methodPath: String { get }
     func makeModel(data:Data) -> Model
 }
 
 extension ApiResource {
-    /*
+    
     var urlComponents: URLComponents {
         var components = URLComponents(string: baseUrl)!
         components.path = methodPath
         return components
     }
-    */
+    
     var url: URL {
-        let baseUrl = "https://sym-json-server.herokuapp.com"
-        let url = baseUrl + methodPath
-        return URL(string: url)!
+        return urlComponents.url!
     }
 }
 
 struct AuthorsResource: ApiResource {
-    //var baseUrl = "https://sym-json-server.herokuapp.com"
-    
+    let baseUrl = "https://sym-json-server.herokuapp.com"
     let methodPath = "/authors"
     
     func makeModel(data: Data) -> [Author]? {
