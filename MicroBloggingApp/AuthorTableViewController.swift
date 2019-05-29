@@ -11,7 +11,7 @@ import UIKit
 class AuthorTableViewController: UITableViewController {
     
     fileprivate var request: AnyObject?
-    var items =  [Author]()
+    var authors =  [Author]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +28,12 @@ class AuthorTableViewController: UITableViewController {
         let authorsResource = AuthorsResource()
         let authorsRequest = ApiRequest(resource: authorsResource)
         request = authorsRequest
-        authorsRequest.load { [weak self] (authors) in
-            guard let items = authors else {
+        authorsRequest.load { [weak self] (authorsList) in
+            guard let listAuth = authorsList else {
                 return
             }
+            self!.authors = listAuth!
+            DispatchQueue.main.async { self?.tableView.reloadData() }
         }
     }
     // MARK: - Table view data source
