@@ -45,13 +45,13 @@ class AuthorTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return items.count
+        return authors.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "authorViewCellId", for: indexPath) as! AuthorTableViewCell
-        let itemAuthor = items[indexPath.row]
+        let itemAuthor = authors[indexPath.row]
         cell.nameLabel?.text = itemAuthor.name
         cell.emailLabel?.text = itemAuthor.email
         // Configure the cell...

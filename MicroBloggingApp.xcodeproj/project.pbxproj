@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A642BA58229E7D88002F8BD7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642BA57229E7D88002F8BD7 /* Post.swift */; };
 		C91962B3229AB4A400FCBB88 /* AuthorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962B2229AB4A400FCBB88 /* AuthorTableViewCell.swift */; };
 		C91962B5229AB9E500FCBB88 /* AuthorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962B4229AB9E500FCBB88 /* AuthorTableViewController.swift */; };
 		C91962BB229ADA4500FCBB88 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962B9229ADA4500FCBB88 /* Author.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A642BA57229E7D88002F8BD7 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C91962B2229AB4A400FCBB88 /* AuthorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewCell.swift; sourceTree = "<group>"; };
 		C91962B4229AB9E500FCBB88 /* AuthorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewController.swift; sourceTree = "<group>"; };
 		C91962B9229ADA4500FCBB88 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				C91962B9229ADA4500FCBB88 /* Author.swift */,
+				A642BA57229E7D88002F8BD7 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				C91962C2229AE87800FCBB88 /* ApiResources.swift in Sources */,
 				C91962B3229AB4A400FCBB88 /* AuthorTableViewCell.swift in Sources */,
 				C9D448A72295E9D8000E1C0D /* MicroBloggingApp.xcdatamodeld in Sources */,
+				A642BA58229E7D88002F8BD7 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
