@@ -15,7 +15,7 @@ struct Author: Codable {
     let name: String?
     let email: String?
     let username: String?
-    let avatarUrl: URL?
+    let avatarUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case identifier = "id"

@@ -48,12 +48,16 @@ class AuthorTableViewController: UITableViewController {
         return authors.count
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showAuthorDetails", sender: self)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "authorViewCellId", for: indexPath) as! AuthorTableViewCell
         let itemAuthor = authors[indexPath.row]
         cell.nameLabel?.text = itemAuthor.name
         cell.emailLabel?.text = itemAuthor.email
+        cell.avatarImageView.downloadImageFrom(link: itemAuthor.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
         // Configure the cell...
 
         return cell

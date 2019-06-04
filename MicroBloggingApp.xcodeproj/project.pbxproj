@@ -15,6 +15,9 @@
 		C91962C0229AE4B600FCBB88 /* RestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962BF229AE4B600FCBB88 /* RestController.swift */; };
 		C91962C2229AE87800FCBB88 /* ApiResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962C1229AE87800FCBB88 /* ApiResources.swift */; };
 		C91962C4229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962C3229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift */; };
+		C988BAEC229F1A9B00130267 /* UIImageView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988BAEB229F1A9B00130267 /* UIImageView+Loader.swift */; };
+		C988BAEE229F236500130267 /* AuthorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988BAED229F236500130267 /* AuthorDetailViewController.swift */; };
+		C988BAF0229F24D100130267 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988BAEF229F24D100130267 /* PostTableViewCell.swift */; };
 		C9D4489F2295E9D8000E1C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D4489E2295E9D8000E1C0D /* AppDelegate.swift */; };
 		C9D448A42295E9D8000E1C0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9D448A22295E9D8000E1C0D /* Main.storyboard */; };
 		C9D448A72295E9D8000E1C0D /* MicroBloggingApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9D448A52295E9D8000E1C0D /* MicroBloggingApp.xcdatamodeld */; };
@@ -50,6 +53,9 @@
 		C91962BF229AE4B600FCBB88 /* RestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestController.swift; sourceTree = "<group>"; };
 		C91962C1229AE87800FCBB88 /* ApiResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResources.swift; sourceTree = "<group>"; };
 		C91962C3229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+Util.swift"; sourceTree = "<group>"; };
+		C988BAEB229F1A9B00130267 /* UIImageView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loader.swift"; sourceTree = "<group>"; };
+		C988BAED229F236500130267 /* AuthorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewController.swift; sourceTree = "<group>"; };
+		C988BAEF229F24D100130267 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		C9D4489B2295E9D8000E1C0D /* MicroBloggingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroBloggingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D4489E2295E9D8000E1C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9D448A32295E9D8000E1C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 		C91962B7229ABA5800FCBB88 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C988BAEB229F1A9B00130267 /* UIImageView+Loader.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -143,6 +150,8 @@
 				C91962BF229AE4B600FCBB88 /* RestController.swift */,
 				C91962C1229AE87800FCBB88 /* ApiResources.swift */,
 				C91962C3229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift */,
+				C988BAED229F236500130267 /* AuthorDetailViewController.swift */,
+				C988BAEF229F24D100130267 /* PostTableViewCell.swift */,
 			);
 			path = MicroBloggingApp;
 			sourceTree = "<group>";
@@ -298,13 +307,16 @@
 			files = (
 				C91962BE229AE42300FCBB88 /* NetworkRequest.swift in Sources */,
 				C91962C0229AE4B600FCBB88 /* RestController.swift in Sources */,
+				C988BAF0229F24D100130267 /* PostTableViewCell.swift in Sources */,
 				C91962B5229AB9E500FCBB88 /* AuthorTableViewController.swift in Sources */,
 				C9D4489F2295E9D8000E1C0D /* AppDelegate.swift in Sources */,
+				C988BAEE229F236500130267 /* AuthorDetailViewController.swift in Sources */,
 				C91962C4229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift in Sources */,
 				C91962BB229ADA4500FCBB88 /* Author.swift in Sources */,
 				C91962C2229AE87800FCBB88 /* ApiResources.swift in Sources */,
 				C91962B3229AB4A400FCBB88 /* AuthorTableViewCell.swift in Sources */,
 				C9D448A72295E9D8000E1C0D /* MicroBloggingApp.xcdatamodeld in Sources */,
+				C988BAEC229F1A9B00130267 /* UIImageView+Loader.swift in Sources */,
 				A642BA58229E7D88002F8BD7 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
