@@ -9,15 +9,27 @@
 import UIKit
 
 class AuthorDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    @IBOutlet weak var tableViewPosts: UITableView!
+    var posts =  [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchPostByAuthor(authorId: 1)
         // Do any additional setup after loading the view.
     }
     
     func fetchPostByAuthor(authorId: Int16) {
-        
+        let query: String = "authorId?\(authorId)"
+        let postsResource = PostsResource(query: query)
+        let postsRequest = ApiRequest(resource: postsResource)
+        postsRequest.load { [weak self] (postsList) in
+            guard let listPosts = postsList else {
+                return
+            }
+            self!.posts = listPosts!
+            DispatchQueue.main.async { self?.tableViewPosts.reloadData() }
+        }
     }
     
     // MARK: - Table view data source

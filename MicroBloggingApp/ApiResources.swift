@@ -12,6 +12,7 @@ protocol ApiResource {
     associatedtype Model:Decodable
     var baseUrl: String { get }
     var methodPath: String { get }
+    var query: String? { get set }
     func makeModel(data:Data) -> Model
 }
 
@@ -20,6 +21,7 @@ extension ApiResource {
     var urlComponents: URLComponents {
         var components = URLComponents(string: baseUrl)!
         components.path = methodPath
+        components.query = query
         return components
     }
     
@@ -29,6 +31,7 @@ extension ApiResource {
 }
 
 struct AuthorsResource: ApiResource {
+    var query: String?
     let baseUrl = "https://sym-json-server.herokuapp.com"
     let methodPath = "/authors"
     
@@ -39,5 +42,20 @@ struct AuthorsResource: ApiResource {
             return nil
         }
         return authors
+    }
+}
+
+struct PostsResource: ApiResource {
+    var query: String?
+    let baseUrl = "https://sym-json-server.herokuapp.com"
+    let methodPath = "/posts"
+    
+    func makeModel(data: Data) -> [Post]? {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        guard let posts: [Post] = try? decoder.decode([Post].self, from: data) else {
+            return nil
+        }
+        return posts
     }
 }
