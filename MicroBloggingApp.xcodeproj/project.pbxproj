@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A642BA58229E7D88002F8BD7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642BA57229E7D88002F8BD7 /* Post.swift */; };
+		A65D03EC22A7EF5200A3F6DD /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65D03EB22A7EF5200A3F6DD /* PostDetailViewController.swift */; };
+		A65D03EE22A7F22800A3F6DD /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65D03ED22A7F22800A3F6DD /* Comment.swift */; };
+		A65D03F022A8166100A3F6DD /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65D03EF22A8166100A3F6DD /* Formatter.swift */; };
 		C91962B3229AB4A400FCBB88 /* AuthorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962B2229AB4A400FCBB88 /* AuthorTableViewCell.swift */; };
 		C91962B5229AB9E500FCBB88 /* AuthorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962B4229AB9E500FCBB88 /* AuthorTableViewController.swift */; };
 		C91962BB229ADA4500FCBB88 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962B9229ADA4500FCBB88 /* Author.swift */; };
 		C91962BE229AE42300FCBB88 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962BD229AE42300FCBB88 /* NetworkRequest.swift */; };
-		C91962C0229AE4B600FCBB88 /* RestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962BF229AE4B600FCBB88 /* RestController.swift */; };
 		C91962C2229AE87800FCBB88 /* ApiResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962C1229AE87800FCBB88 /* ApiResources.swift */; };
 		C91962C4229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962C3229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift */; };
 		C988BAEC229F1A9B00130267 /* UIImageView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988BAEB229F1A9B00130267 /* UIImageView+Loader.swift */; };
@@ -46,11 +48,13 @@
 
 /* Begin PBXFileReference section */
 		A642BA57229E7D88002F8BD7 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A65D03EB22A7EF5200A3F6DD /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		A65D03ED22A7F22800A3F6DD /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		A65D03EF22A8166100A3F6DD /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		C91962B2229AB4A400FCBB88 /* AuthorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewCell.swift; sourceTree = "<group>"; };
 		C91962B4229AB9E500FCBB88 /* AuthorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewController.swift; sourceTree = "<group>"; };
 		C91962B9229ADA4500FCBB88 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		C91962BD229AE42300FCBB88 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		C91962BF229AE4B600FCBB88 /* RestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestController.swift; sourceTree = "<group>"; };
 		C91962C1229AE87800FCBB88 /* ApiResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResources.swift; sourceTree = "<group>"; };
 		C91962C3229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+Util.swift"; sourceTree = "<group>"; };
 		C988BAEB229F1A9B00130267 /* UIImageView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loader.swift"; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			children = (
 				C91962B9229ADA4500FCBB88 /* Author.swift */,
 				A642BA57229E7D88002F8BD7 /* Post.swift */,
+				A65D03ED22A7F22800A3F6DD /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,11 +152,12 @@
 				C91962B2229AB4A400FCBB88 /* AuthorTableViewCell.swift */,
 				C91962B4229AB9E500FCBB88 /* AuthorTableViewController.swift */,
 				C91962BD229AE42300FCBB88 /* NetworkRequest.swift */,
-				C91962BF229AE4B600FCBB88 /* RestController.swift */,
 				C91962C1229AE87800FCBB88 /* ApiResources.swift */,
 				C91962C3229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift */,
 				C988BAED229F236500130267 /* AuthorDetailViewController.swift */,
 				C988BAEF229F24D100130267 /* PostTableViewCell.swift */,
+				A65D03EB22A7EF5200A3F6DD /* PostDetailViewController.swift */,
+				A65D03EF22A8166100A3F6DD /* Formatter.swift */,
 			);
 			path = MicroBloggingApp;
 			sourceTree = "<group>";
@@ -306,16 +312,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91962BE229AE42300FCBB88 /* NetworkRequest.swift in Sources */,
-				C91962C0229AE4B600FCBB88 /* RestController.swift in Sources */,
 				C988BAF0229F24D100130267 /* PostTableViewCell.swift in Sources */,
 				C91962B5229AB9E500FCBB88 /* AuthorTableViewController.swift in Sources */,
+				A65D03EE22A7F22800A3F6DD /* Comment.swift in Sources */,
 				C9D4489F2295E9D8000E1C0D /* AppDelegate.swift in Sources */,
+				A65D03EC22A7EF5200A3F6DD /* PostDetailViewController.swift in Sources */,
 				C988BAEE229F236500130267 /* AuthorDetailViewController.swift in Sources */,
 				C91962C4229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift in Sources */,
 				C91962BB229ADA4500FCBB88 /* Author.swift in Sources */,
 				C91962C2229AE87800FCBB88 /* ApiResources.swift in Sources */,
 				C91962B3229AB4A400FCBB88 /* AuthorTableViewCell.swift in Sources */,
 				C9D448A72295E9D8000E1C0D /* MicroBloggingApp.xcdatamodeld in Sources */,
+				A65D03F022A8166100A3F6DD /* Formatter.swift in Sources */,
 				C988BAEC229F1A9B00130267 /* UIImageView+Loader.swift in Sources */,
 				A642BA58229E7D88002F8BD7 /* Post.swift in Sources */,
 			);
@@ -495,7 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 774MEAWCXT;
 				INFOPLIST_FILE = MicroBloggingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -514,7 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 774MEAWCXT;
 				INFOPLIST_FILE = MicroBloggingApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

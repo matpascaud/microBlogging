@@ -10,7 +10,7 @@ import Foundation
 
 struct Post: Codable {
     let identifier: Int16
-    let date: String?
+    let date: Date?
     let title: String?
     let body: String?
     let imageUrl: String?

@@ -12,7 +12,7 @@ class PostTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
-    @IBOutlet weak var daeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     
     override func awakeFromNib() {

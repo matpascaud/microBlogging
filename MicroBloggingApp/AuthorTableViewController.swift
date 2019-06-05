@@ -49,7 +49,7 @@ class AuthorTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showAuthorDetails", sender: self)
+        self.performSegue(withIdentifier: "showAuthorDetails", sender: authors[indexPath.row])
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,14 +99,18 @@ class AuthorTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showAuthorDetails" {
+            let destVC = segue.destination as! AuthorDetailViewController
+            destVC.author = sender as? Author
+        }
     }
-    */
+
 
 }

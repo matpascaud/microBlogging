@@ -52,10 +52,25 @@ struct PostsResource: ApiResource {
     
     func makeModel(data: Data) -> [Post]? {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .secondsSince1970
+        decoder.dateDecodingStrategy = .iso8601noFS
         guard let posts: [Post] = try? decoder.decode([Post].self, from: data) else {
             return nil
         }
         return posts
+    }
+}
+
+struct CommentsResource: ApiResource {
+    var query: String?
+    let baseUrl = "https://sym-json-server.herokuapp.com"
+    let methodPath = "/comments"
+    
+    func makeModel(data: Data) -> [Comment]? {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        guard let comments: [Comment] = try? decoder.decode([Comment].self, from: data) else {
+            return nil
+        }
+        return comments
     }
 }
