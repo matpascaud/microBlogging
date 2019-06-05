@@ -14,20 +14,30 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var postBodyLabel: UILabel!
+    @IBOutlet weak var postImageView: UIImageView!
     
+    let dateFormatter = DateFormatter()
+    
+    let cellReuseIdentifier = "identifierCellSubtitle"
     var post: Post!
     fileprivate var request: AnyObject?
     var comments =  [Comment]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale.current
+        initUIPost()
+        fetchCommentsByPost(postId: post.identifier)
         // Do any additional setup after loading the view.
     }
     
     func initUIPost() {
         self.postTitleLabel.text = post.title
         self.postBodyLabel.text = post.body
+        self.postDateLabel.text = dateFormatter.string(from: post.date!)
+        self.postImageView.downloadImageFrom(link: post.imageUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
     }
     
     func fetchCommentsByPost(postId: Int16) {
@@ -60,10 +70,17 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCellId", for: indexPath) as! PostTableViewCell
+        var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier)
+        if (cell == nil)
+        {
+            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
+                                   reuseIdentifier: cellReuseIdentifier)
+        }
         let itemComment = comments[indexPath.row]
-
-        return cell
+        cell?.textLabel?.text = itemComment.userName
+        cell?.detailTextLabel?.text = itemComment.body
+        cell?.imageView?.downloadImageFrom(link: itemComment.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
+        return cell!
     }
     /*
     // MARK: - Navigation

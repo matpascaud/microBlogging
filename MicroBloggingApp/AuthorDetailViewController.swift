@@ -15,13 +15,17 @@ class AuthorDetailViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var authorEmailLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var tableViewPosts: UITableView!
-    var author: Author!
     
+    var author: Author!
+    let dateFormatter = DateFormatter()
     fileprivate var request: AnyObject?
     var posts =  [Post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale.current
         initUIAuthor()
         fetchPostByAuthor(authorId: author.identifier)
     }
@@ -71,6 +75,7 @@ class AuthorDetailViewController: UIViewController, UITableViewDelegate, UITable
         let itemPost = posts[indexPath.row]
         cell.titleLabel.text = itemPost.title
         cell.bodyLabel.text = itemPost.body
+        cell.dateLabel.text = dateFormatter.string(from: itemPost.date!)
         return cell
     }
 

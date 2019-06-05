@@ -30,6 +30,18 @@ extension ApiResource {
     }
 }
 
+extension JSONDecoder.DateDecodingStrategy {
+    static let iso8601withFractionalSeconds = custom {
+        let container = try $0.singleValueContainer()
+        let string = try container.decode(String.self)
+        guard let date = Formatter.iso8601.date(from: string) else {
+            throw DecodingError.dataCorruptedError(in: container,
+                                                   debugDescription: "Invalid date: " + string)
+        }
+        return date
+    }
+}
+
 struct AuthorsResource: ApiResource {
     var query: String?
     let baseUrl = "https://sym-json-server.herokuapp.com"
@@ -37,7 +49,6 @@ struct AuthorsResource: ApiResource {
     
     func makeModel(data: Data) -> [Author]? {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .secondsSince1970
         guard let authors: [Author] = try? decoder.decode([Author].self, from: data) else {
             return nil
         }
@@ -52,7 +63,7 @@ struct PostsResource: ApiResource {
     
     func makeModel(data: Data) -> [Post]? {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601noFS
+        decoder.dateDecodingStrategy = .iso8601withFractionalSeconds
         guard let posts: [Post] = try? decoder.decode([Post].self, from: data) else {
             return nil
         }
@@ -67,7 +78,7 @@ struct CommentsResource: ApiResource {
     
     func makeModel(data: Data) -> [Comment]? {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .secondsSince1970
+        decoder.dateDecodingStrategy = .iso8601withFractionalSeconds
         guard let comments: [Comment] = try? decoder.decode([Comment].self, from: data) else {
             return nil
         }
