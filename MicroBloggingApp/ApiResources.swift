@@ -77,10 +77,13 @@ struct CommentsResource: ApiResource {
     let methodPath = "/comments"
     
     func makeModel(data: Data) -> [Comment]? {
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601withFractionalSeconds
-        guard let comments: [Comment] = try? decoder.decode([Comment].self, from: data) else {
-            return nil
+        var comments: [Comment]?
+        do {
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601withFractionalSeconds
+            comments = try decoder.decode([Comment].self, from: data)
+        } catch let error {
+            print(error)
         }
         return comments
     }

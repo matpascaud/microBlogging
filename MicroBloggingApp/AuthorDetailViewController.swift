@@ -27,7 +27,7 @@ class AuthorDetailViewController: UIViewController, UITableViewDelegate, UITable
         dateFormatter.timeStyle = .none
         dateFormatter.locale = Locale.current
         initUIAuthor()
-        fetchPostByAuthor(authorId: author.identifier)
+        fetchPostByAuthor(authorId: author!.identifier)
     }
     
     func initUIAuthor() {
@@ -40,7 +40,7 @@ class AuthorDetailViewController: UIViewController, UITableViewDelegate, UITable
         self.avatarImageView.downloadImageFrom(link: author.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
     }
     
-    func fetchPostByAuthor(authorId: Int16) {
+    func fetchPostByAuthor(authorId: Int) {
         let query: String = "authorId=\(authorId)"
         let postsResource = PostsResource(query: query)
         let postsRequest = ApiRequest(resource: postsResource)

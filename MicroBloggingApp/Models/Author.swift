@@ -11,7 +11,7 @@ import Foundation
 
 struct Author: Codable {
     
-    let identifier: Int16
+    let identifier: Int
     let name: String?
     let email: String?
     let username: String?

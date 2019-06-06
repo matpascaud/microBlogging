@@ -9,13 +9,13 @@
 import Foundation
 
 struct Comment: Codable {
-    let identifier: Int16
+    let identifier: Int
     let date: Date?
     let body: String?
     let userName: String?
     let email: String?
     let avatarUrl: String?
-    let postId: Int16?
+    let postId: Int?
     
     enum CodingKeys: String, CodingKey {
         case identifier = "id"

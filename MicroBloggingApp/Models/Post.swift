@@ -9,12 +9,12 @@
 import Foundation
 
 struct Post: Codable {
-    let identifier: Int16
+    let identifier: Int
     let date: Date?
     let title: String?
     let body: String?
     let imageUrl: String?
-    let authorId: Int16?
+    let authorId: Int?
     
     enum CodingKeys: String, CodingKey {
         case identifier = "id"

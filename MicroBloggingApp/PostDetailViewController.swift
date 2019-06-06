@@ -29,7 +29,7 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         dateFormatter.timeStyle = .none
         dateFormatter.locale = Locale.current
         initUIPost()
-        fetchCommentsByPost(postId: post.identifier)
+        fetchCommentsByPost(postId: post!.identifier)
         // Do any additional setup after loading the view.
     }
     
@@ -40,7 +40,7 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         self.postImageView.downloadImageFrom(link: post.imageUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
     }
     
-    func fetchCommentsByPost(postId: Int16) {
+    func fetchCommentsByPost(postId: Int) {
         let query: String = "postId=\(postId)"
         let commentsResource = CommentsResource(query: query)
         let commentsRequest = ApiRequest(resource: commentsResource)
@@ -49,6 +49,7 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             guard let listComments = commentsList else {
                 return
             }
+            print("Comments size \(listComments?.count)")
             self!.comments = listComments!
             DispatchQueue.main.async { self?.tableView.reloadData() }
         }
