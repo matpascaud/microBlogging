@@ -21,6 +21,11 @@ class AuthorTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        if Storage.fileExists("authors.txt", in: .documents) {
+            self.authors = Storage.retrieve("authors.txt", from: .documents, as: [Author].self)
+            self.tableView.reloadData()
+        }
+        
         fetchAuthors()
     }
     

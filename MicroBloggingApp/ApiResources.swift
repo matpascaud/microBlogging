@@ -48,9 +48,13 @@ struct AuthorsResource: ApiResource {
     let methodPath = "/authors"
     
     func makeModel(data: Data) -> [Author]? {
-        let decoder = JSONDecoder()
-        guard let authors: [Author] = try? decoder.decode([Author].self, from: data) else {
-            return nil
+        var authors: [Author]?
+        do {
+            let decoder = JSONDecoder()
+            authors = try decoder.decode([Author].self, from: data)
+            Storage.store(authors!, to: .documents, as: "authors.txt")
+        } catch let error {
+            print(error)
         }
         return authors
     }
@@ -62,10 +66,14 @@ struct PostsResource: ApiResource {
     let methodPath = "/posts"
     
     func makeModel(data: Data) -> [Post]? {
+        var posts: [Post]?
+        do {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601withFractionalSeconds
-        guard let posts: [Post] = try? decoder.decode([Post].self, from: data) else {
-            return nil
+        posts = try decoder.decode([Post].self, from: data)
+        
+        } catch let error {
+            print(error)
         }
         return posts
     }

@@ -9,24 +9,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MicroBloggingApp/ApiResources.swift"
-            timestampString = "581461999.657439"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "makeModel(data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/NetworkRequest.swift"
-            timestampString = "581461999.657534"
+            timestampString = "581547823.105336"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -38,11 +22,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/NetworkRequest.swift"
-            timestampString = "581461999.6580729"
+            timestampString = "581547823.105413"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -54,11 +38,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/NetworkRequest.swift"
-            timestampString = "581461999.658453"
+            timestampString = "581547823.105479"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -74,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/ApiResources.swift"
-            timestampString = "581461999.658821"
+            timestampString = "581547823.105543"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -90,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/NetworkRequest.swift"
-            timestampString = "581461999.658898"
+            timestampString = "581547823.105998"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -106,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/NetworkRequest.swift"
-            timestampString = "581461999.659255"
+            timestampString = "581547823.10606"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -154,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/NetworkRequest.swift"
-            timestampString = "581461999.65961"
+            timestampString = "581547823.106119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -250,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/PostDetailViewController.swift"
-            timestampString = "581461999.6600471"
+            timestampString = "581547823.1062779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -266,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/PostDetailViewController.swift"
-            timestampString = "581461999.660489"
+            timestampString = "581547823.106686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -282,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/ApiResources.swift"
-            timestampString = "581461999.660893"
+            timestampString = "581547823.107023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "makeModel(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -298,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/ApiResources.swift"
-            timestampString = "581461999.660966"
+            timestampString = "581547823.107355"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "makeModel(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,13 +298,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MicroBloggingApp/ApiResources.swift"
-            timestampString = "581461999.6610349"
+            timestampString = "581547823.107685"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "makeModel(data:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MicroBloggingApp.PostsResource.makeModel(data: Foundation.Data) -&gt; Swift.Optional&lt;Swift.Array&lt;MicroBloggingApp.Post&gt;&gt;"
+                  moduleName = "MicroBloggingApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matt/work/MicroBloggingApp/microBlogging/MicroBloggingApp/ApiResources.swift"
+                  timestampString = "581547798.728495"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "378">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MicroBloggingApp.PostsResource.makeModel(data: Foundation.Data) -&gt; Swift.Optional&lt;Swift.Array&lt;MicroBloggingApp.Post&gt;&gt;"
+                  moduleName = "MicroBloggingApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matt/work/MicroBloggingApp/microBlogging/MicroBloggingApp/ApiResources.swift"
+                  timestampString = "581547798.732253"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "765">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MicroBloggingApp.PostsResource.makeModel(data: Foundation.Data) -&gt; Swift.Optional&lt;Swift.Array&lt;MicroBloggingApp.Post&gt;&gt;"
+                  moduleName = "MicroBloggingApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matt/work/MicroBloggingApp/microBlogging/MicroBloggingApp/ApiResources.swift"
+                  timestampString = "581547798.736445"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "839">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
