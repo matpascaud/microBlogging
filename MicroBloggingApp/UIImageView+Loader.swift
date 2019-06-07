@@ -9,13 +9,28 @@
 import Foundation
 import UIKit
 
+let imageCache = NSCache<NSString, UIImage>()
+
 extension UIImageView {
     func downloadImageFrom(link:String, contentMode: UIView.ContentMode) {
-        URLSession.shared.dataTask(with: URL(string:link)!) { (data, response, error) -> Void in
-            DispatchQueue.main.async {
-                self.contentMode =  contentMode
-                if let data = data { self.image = UIImage(data: data) }
-            }
-        }.resume()
+        let url = URL(string:link)!
+        //check if image in cache using hash from link
+        if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
+            self.contentMode =  contentMode
+            self.image = cachedImage
+        }
+        else {
+            URLSession.shared.dataTask(with: url) { (data, response, error) -> Void in
+                DispatchQueue.main.async {
+                    //cache image with a unique hash from the link
+                    self.contentMode =  contentMode
+                    if let data = data {
+                        let image = UIImage(data: data)
+                        self.image = image
+                        imageCache.setObject(image!, forKey: url.absoluteString as NSString)
+                    }
+                }
+                }.resume()
+        }
     }
 }

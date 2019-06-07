@@ -44,8 +44,8 @@ extension JSONDecoder.DateDecodingStrategy {
 
 struct AuthorsResource: ApiResource {
     var query: String?
-    let baseUrl = "https://sym-json-server.herokuapp.com"
-    let methodPath = "/authors"
+    let baseUrl = Constants.baseUrl
+    let methodPath = Constants.authorsPath
     
     func makeModel(data: Data) -> [Author]? {
         var authors: [Author]?
@@ -62,8 +62,8 @@ struct AuthorsResource: ApiResource {
 
 struct PostsResource: ApiResource {
     var query: String?
-    let baseUrl = "https://sym-json-server.herokuapp.com"
-    let methodPath = "/posts"
+    let baseUrl = Constants.baseUrl
+    let methodPath = Constants.postsPath
     
     func makeModel(data: Data) -> [Post]? {
         var posts: [Post]?
@@ -81,8 +81,8 @@ struct PostsResource: ApiResource {
 
 struct CommentsResource: ApiResource {
     var query: String?
-    let baseUrl = "https://sym-json-server.herokuapp.com"
-    let methodPath = "/comments"
+    let baseUrl = Constants.baseUrl
+    let methodPath = Constants.commentsPath
     
     func makeModel(data: Data) -> [Comment]? {
         var comments: [Comment]?

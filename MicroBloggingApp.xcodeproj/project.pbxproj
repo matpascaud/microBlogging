@@ -10,6 +10,7 @@
 		A642BA58229E7D88002F8BD7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A642BA57229E7D88002F8BD7 /* Post.swift */; };
 		A65D03EC22A7EF5200A3F6DD /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65D03EB22A7EF5200A3F6DD /* PostDetailViewController.swift */; };
 		A65D03EE22A7F22800A3F6DD /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65D03ED22A7F22800A3F6DD /* Comment.swift */; };
+		A68D94C922AA5921004F1488 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68D94C822AA5921004F1488 /* Constants.swift */; };
 		A6CE98FE22A957B400772F0E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE98FD22A957B400772F0E /* PostTableViewCell.swift */; };
 		C91962B3229AB4A400FCBB88 /* AuthorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962B2229AB4A400FCBB88 /* AuthorTableViewCell.swift */; };
 		C91962B5229AB9E500FCBB88 /* AuthorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962B4229AB9E500FCBB88 /* AuthorTableViewController.swift */; };
@@ -51,6 +52,7 @@
 		A642BA57229E7D88002F8BD7 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A65D03EB22A7EF5200A3F6DD /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		A65D03ED22A7F22800A3F6DD /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		A68D94C822AA5921004F1488 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A6CE98FD22A957B400772F0E /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		C91962B2229AB4A400FCBB88 /* AuthorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewCell.swift; sourceTree = "<group>"; };
 		C91962B4229AB9E500FCBB88 /* AuthorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				A6CE98FD22A957B400772F0E /* PostTableViewCell.swift */,
 				C9679C8F22A857C00059DDFE /* Formatter.swift */,
 				C9679C9122A9AF4D0059DDFE /* DiskStorage.swift */,
+				A68D94C822AA5921004F1488 /* Constants.swift */,
 			);
 			path = MicroBloggingApp;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91962BE229AE42300FCBB88 /* NetworkRequest.swift in Sources */,
+				A68D94C922AA5921004F1488 /* Constants.swift in Sources */,
 				C91962B5229AB9E500FCBB88 /* AuthorTableViewController.swift in Sources */,
 				A6CE98FE22A957B400772F0E /* PostTableViewCell.swift in Sources */,
 				A65D03EE22A7F22800A3F6DD /* Comment.swift in Sources */,
