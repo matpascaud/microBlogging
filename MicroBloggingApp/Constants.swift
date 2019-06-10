@@ -13,4 +13,5 @@ struct Constants {
     static let authorsPath = "/authors"
     static let postsPath = "/posts"
     static let commentsPath = "/comments"
+    static let cacheAuthorsFilename = "authors.txt"
 }

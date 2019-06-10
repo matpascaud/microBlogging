@@ -21,16 +21,16 @@ class AuthorTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        if Storage.fileExists("authors.txt", in: .documents) {
-            self.authors = Storage.retrieve("authors.txt", from: .documents, as: [Author].self)
-            self.tableView.reloadData()
-        }
-        
         fetchAuthors()
     }
     
     func fetchAuthors() {
-        let authorsResource = AuthorsResource()
+        if Storage.fileExists("authors.txt", in: .caches) {
+            self.authors = Storage.retrieve(Constants.cacheAuthorsFilename, from: .documents, as: [Author].self)
+            self.tableView.reloadData()
+        }
+        let queryString: String = "_limit=50"
+        let authorsResource = AuthorsResource(query: queryString)
         let authorsRequest = ApiRequest(resource: authorsResource)
         request = authorsRequest
         authorsRequest.load { [weak self] (authorsList) in
@@ -50,6 +50,11 @@ class AuthorTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if authors.count == 0 {
+            self.tableView.setEmptyMessage("Loading data...")
+        } else {
+            self.tableView.restore()
+        }
         return authors.count
     }
 
@@ -62,6 +67,7 @@ class AuthorTableViewController: UITableViewController {
         let itemAuthor = authors[indexPath.row]
         cell.nameLabel?.text = itemAuthor.name
         cell.emailLabel?.text = itemAuthor.email
+        cell.avatarImageView.image = nil
         cell.avatarImageView.downloadImageFrom(link: itemAuthor.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
         // Configure the cell...
 
@@ -116,6 +122,5 @@ class AuthorTableViewController: UITableViewController {
             destVC.author = sender as? Author
         }
     }
-
 
 }

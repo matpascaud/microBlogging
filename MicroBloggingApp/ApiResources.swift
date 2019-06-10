@@ -52,7 +52,7 @@ struct AuthorsResource: ApiResource {
         do {
             let decoder = JSONDecoder()
             authors = try decoder.decode([Author].self, from: data)
-            Storage.store(authors!, to: .documents, as: "authors.txt")
+            Storage.store(authors!, to: .documents, as: Constants.cacheAuthorsFilename)
         } catch let error {
             print(error)
         }
@@ -93,6 +93,7 @@ struct CommentsResource: ApiResource {
         } catch let error {
             print(error)
         }
-        return comments
+        //sort comments
+        return comments?.sorted(by: { $0.date!.compare($1.date!) == .orderedAscending })
     }
 }

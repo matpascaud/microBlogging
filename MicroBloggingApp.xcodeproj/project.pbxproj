@@ -17,9 +17,9 @@
 		C91962BB229ADA4500FCBB88 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962B9229ADA4500FCBB88 /* Author.swift */; };
 		C91962BE229AE42300FCBB88 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962BD229AE42300FCBB88 /* NetworkRequest.swift */; };
 		C91962C2229AE87800FCBB88 /* ApiResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962C1229AE87800FCBB88 /* ApiResources.swift */; };
-		C91962C4229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91962C3229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift */; };
 		C9679C9022A857C00059DDFE /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9679C8F22A857C00059DDFE /* Formatter.swift */; };
 		C9679C9222A9AF4D0059DDFE /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9679C9122A9AF4D0059DDFE /* DiskStorage.swift */; };
+		C97D42E922AE32DF00DD5706 /* UITableView+EmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D42E822AE32DF00DD5706 /* UITableView+EmptyMessage.swift */; };
 		C988BAEC229F1A9B00130267 /* UIImageView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988BAEB229F1A9B00130267 /* UIImageView+Loader.swift */; };
 		C988BAEE229F236500130267 /* AuthorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988BAED229F236500130267 /* AuthorDetailViewController.swift */; };
 		C9D4489F2295E9D8000E1C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D4489E2295E9D8000E1C0D /* AppDelegate.swift */; };
@@ -59,9 +59,9 @@
 		C91962B9229ADA4500FCBB88 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		C91962BD229AE42300FCBB88 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		C91962C1229AE87800FCBB88 /* ApiResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResources.swift; sourceTree = "<group>"; };
-		C91962C3229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+Util.swift"; sourceTree = "<group>"; };
 		C9679C8F22A857C00059DDFE /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		C9679C9122A9AF4D0059DDFE /* DiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
+		C97D42E822AE32DF00DD5706 /* UITableView+EmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyMessage.swift"; sourceTree = "<group>"; };
 		C988BAEB229F1A9B00130267 /* UIImageView+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Loader.swift"; sourceTree = "<group>"; };
 		C988BAED229F236500130267 /* AuthorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorDetailViewController.swift; sourceTree = "<group>"; };
 		C9D4489B2295E9D8000E1C0D /* MicroBloggingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroBloggingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +107,8 @@
 		C91962B7229ABA5800FCBB88 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C988BAEB229F1A9B00130267 /* UIImageView+Loader.swift */,
+				C91962B2229AB4A400FCBB88 /* AuthorTableViewCell.swift */,
+				A6CE98FD22A957B400772F0E /* PostTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -120,6 +121,35 @@
 				A65D03ED22A7F22800A3F6DD /* Comment.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C97D42EA22AE3B0F00DD5706 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C91962C1229AE87800FCBB88 /* ApiResources.swift */,
+				C91962BD229AE42300FCBB88 /* NetworkRequest.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		C9BC1E9522AF004000FFF0F5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C97D42E822AE32DF00DD5706 /* UITableView+EmptyMessage.swift */,
+				C988BAEB229F1A9B00130267 /* UIImageView+Loader.swift */,
+				C9679C8F22A857C00059DDFE /* Formatter.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C9BC1E9622AF021700FFF0F5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C91962B4229AB9E500FCBB88 /* AuthorTableViewController.swift */,
+				C988BAED229F236500130267 /* AuthorDetailViewController.swift */,
+				A65D03EB22A7EF5200A3F6DD /* PostDetailViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C9D448922295E9D8000E1C0D = {
@@ -145,6 +175,9 @@
 		C9D4489D2295E9D8000E1C0D /* MicroBloggingApp */ = {
 			isa = PBXGroup;
 			children = (
+				C9BC1E9622AF021700FFF0F5 /* ViewControllers */,
+				C9BC1E9522AF004000FFF0F5 /* Extensions */,
+				C97D42EA22AE3B0F00DD5706 /* Network */,
 				C91962B8229ABA6600FCBB88 /* Models */,
 				C91962B7229ABA5800FCBB88 /* Views */,
 				C9D4489E2295E9D8000E1C0D /* AppDelegate.swift */,
@@ -153,15 +186,6 @@
 				C9D448AA2295E9DA000E1C0D /* LaunchScreen.storyboard */,
 				C9D448AD2295E9DA000E1C0D /* Info.plist */,
 				C9D448A52295E9D8000E1C0D /* MicroBloggingApp.xcdatamodeld */,
-				C91962B2229AB4A400FCBB88 /* AuthorTableViewCell.swift */,
-				C91962B4229AB9E500FCBB88 /* AuthorTableViewController.swift */,
-				C91962BD229AE42300FCBB88 /* NetworkRequest.swift */,
-				C91962C1229AE87800FCBB88 /* ApiResources.swift */,
-				C91962C3229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift */,
-				C988BAED229F236500130267 /* AuthorDetailViewController.swift */,
-				A65D03EB22A7EF5200A3F6DD /* PostDetailViewController.swift */,
-				A6CE98FD22A957B400772F0E /* PostTableViewCell.swift */,
-				C9679C8F22A857C00059DDFE /* Formatter.swift */,
 				C9679C9122A9AF4D0059DDFE /* DiskStorage.swift */,
 				A68D94C822AA5921004F1488 /* Constants.swift */,
 			);
@@ -318,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91962BE229AE42300FCBB88 /* NetworkRequest.swift in Sources */,
+				C97D42E922AE32DF00DD5706 /* UITableView+EmptyMessage.swift in Sources */,
 				A68D94C922AA5921004F1488 /* Constants.swift in Sources */,
 				C91962B5229AB9E500FCBB88 /* AuthorTableViewController.swift in Sources */,
 				A6CE98FE22A957B400772F0E /* PostTableViewCell.swift in Sources */,
@@ -325,7 +350,6 @@
 				C9D4489F2295E9D8000E1C0D /* AppDelegate.swift in Sources */,
 				A65D03EC22A7EF5200A3F6DD /* PostDetailViewController.swift in Sources */,
 				C988BAEE229F236500130267 /* AuthorDetailViewController.swift in Sources */,
-				C91962C4229B2CB400FCBB88 /* CodingUserInfoKey+Util.swift in Sources */,
 				C91962BB229ADA4500FCBB88 /* Author.swift in Sources */,
 				C91962C2229AE87800FCBB88 /* ApiResources.swift in Sources */,
 				C91962B3229AB4A400FCBB88 /* AuthorTableViewCell.swift in Sources */,

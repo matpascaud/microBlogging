@@ -41,7 +41,7 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func fetchCommentsByPost(postId: Int) {
-        let query: String = "postId=\(postId)"
+        let query: String = "postId=\(postId)&_limit=40"
         let commentsResource = CommentsResource(query: query)
         let commentsRequest = ApiRequest(resource: commentsResource)
         request = commentsRequest
@@ -49,7 +49,6 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             guard let listComments = commentsList else {
                 return
             }
-            print("Comments size \(listComments?.count)")
             self!.comments = listComments!
             DispatchQueue.main.async { self?.tableView.reloadData() }
         }
@@ -76,10 +75,12 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         {
             cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
                                    reuseIdentifier: cellReuseIdentifier)
+            cell?.detailTextLabel?.numberOfLines = 0
         }
         let itemComment = comments[indexPath.row]
         cell?.textLabel?.text = itemComment.userName
         cell?.detailTextLabel?.text = itemComment.body
+        cell?.imageView?.image = nil
         cell?.imageView?.downloadImageFrom(link: itemComment.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
         return cell!
     }
