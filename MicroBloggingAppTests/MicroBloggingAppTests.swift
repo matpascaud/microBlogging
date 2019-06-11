@@ -48,6 +48,20 @@ class MicroBloggingAppTests: XCTestCase {
         }
     }
     
+    func testAPICallDetailAuthor() {
+        let authorId = -1
+        let query: String = "authorId=\(authorId)&_limit=40"
+        let postsResource = PostsResource(query: query)
+        let postsRequest = ApiRequest(resource: postsResource)
+        postsRequest.load { [weak self] (postsList) in
+            guard let listPosts = postsList else {
+                XCTAssertEqual(self?.authorVC.authors.count, 0)
+                return
+            }
+            XCTFail()
+        }
+    }
+    
     
     func test() {
         
