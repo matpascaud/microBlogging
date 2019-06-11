@@ -35,6 +35,7 @@ class AuthorTableViewController: UITableViewController {
         request = authorsRequest
         authorsRequest.load { [weak self] (authorsList) in
             guard let listAuth = authorsList else {
+                //error
                 return
             }
             self!.authors = listAuth!
@@ -69,8 +70,6 @@ class AuthorTableViewController: UITableViewController {
         cell.emailLabel?.text = itemAuthor.email
         cell.avatarImageView.image = nil
         cell.avatarImageView.downloadImageFrom(link: itemAuthor.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
-        // Configure the cell...
-
         return cell
     }
     
