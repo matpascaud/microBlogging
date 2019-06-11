@@ -69,7 +69,7 @@ class AuthorTableViewController: UITableViewController {
         cell.nameLabel?.text = itemAuthor.name
         cell.emailLabel?.text = itemAuthor.email
         cell.avatarImageView.image = nil
-        cell.avatarImageView.downloadImageFrom(link: itemAuthor.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
+        cell.avatarImageView.downloadImageFrom(link: itemAuthor.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit, superview: cell)
         return cell
     }
     

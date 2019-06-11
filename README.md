@@ -14,4 +14,5 @@ Many things could be improved:
 * Code need to be documented
 * Code for cache retrieved from https://medium.com/@sdrzn/swift-4-codable-lets-make-things-even-easier-c793b6cf29e1. With more time, I would have prefered to put the cache using CoreData  
 * handle errors with messages and the different type of errors (timeout, connectivity....)
+* Add priority for network request
 

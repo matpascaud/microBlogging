@@ -18,7 +18,6 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     let dateFormatter = DateFormatter()
     
-    let cellReuseIdentifier = "identifierCellSubtitle"
     var post: Post!
     fileprivate var request: AnyObject?
     var comments =  [Comment]()
@@ -37,7 +36,7 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         self.postTitleLabel.text = post.title
         self.postBodyLabel.text = post.body
         self.postDateLabel.text = dateFormatter.string(from: post.date!)
-        self.postImageView.downloadImageFrom(link: post.imageUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
+        self.postImageView.downloadImageFrom(link: post.imageUrl!, contentMode: UIView.ContentMode.scaleAspectFit, superview: nil)
     }
     
     func fetchCommentsByPost(postId: Int) {
@@ -70,19 +69,14 @@ class PostDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier)
-        if (cell == nil)
-        {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
-                                   reuseIdentifier: cellReuseIdentifier)
-            cell?.detailTextLabel?.numberOfLines = 0
-        }
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "commentCellId", for: indexPath) as! CommentTableViewCell
         let itemComment = comments[indexPath.row]
-        cell?.textLabel?.text = itemComment.userName
-        cell?.detailTextLabel?.text = itemComment.body
-        cell?.imageView?.image = nil
-        cell?.imageView?.downloadImageFrom(link: itemComment.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
-        return cell!
+        cell.usernameLabel.text = itemComment.userName
+        cell.bodyLabel.text = itemComment.body
+        cell.avatarImageView.image = nil
+        cell.avatarImageView?.downloadImageFrom(link: itemComment.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit, superview: cell)
+        return cell
     }
     /*
     // MARK: - Navigation

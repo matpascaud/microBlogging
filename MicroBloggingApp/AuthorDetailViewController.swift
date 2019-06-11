@@ -37,7 +37,7 @@ class AuthorDetailViewController: UIViewController, UITableViewDelegate, UITable
         //rounded avatar image view
         self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.width / 2
         self.avatarImageView.clipsToBounds = true
-        self.avatarImageView.downloadImageFrom(link: author.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit)
+        self.avatarImageView.downloadImageFrom(link: author.avatarUrl!, contentMode: UIView.ContentMode.scaleAspectFit, superview: nil)
     }
     
     func fetchPostsByAuthor(authorId: Int) {
