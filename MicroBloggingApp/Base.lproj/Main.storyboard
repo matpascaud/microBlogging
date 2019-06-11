@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mvv-21-XIt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mvv-21-XIt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Author Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AuthorDetailViewController" customModule="MicroBloggingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="authorDetailViewControllerID" id="BYZ-38-t0r" customClass="AuthorDetailViewController" customModule="MicroBloggingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgY-yP-OwS">
-                                <rect key="frame" x="5" y="69" width="38" height="18"/>
+                                <rect key="frame" x="5" y="69" width="290" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -220,6 +220,7 @@
                         <constraints>
                             <constraint firstItem="U4t-BL-PzQ" firstAttribute="top" secondItem="YgY-yP-OwS" secondAttribute="bottom" constant="5" id="2Mn-yZ-4kU"/>
                             <constraint firstItem="RMo-cB-zcu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Edz-hw-Ky7" secondAttribute="trailing" id="2os-KK-Wpb"/>
+                            <constraint firstItem="RMo-cB-zcu" firstAttribute="trailing" secondItem="YgY-yP-OwS" secondAttribute="trailing" constant="80" id="3jn-TE-FB9"/>
                             <constraint firstItem="U4t-BL-PzQ" firstAttribute="centerX" secondItem="N1d-Yj-LMt" secondAttribute="centerX" id="9gZ-MF-0Gq"/>
                             <constraint firstItem="RMo-cB-zcu" firstAttribute="trailing" secondItem="B0T-PA-32S" secondAttribute="trailing" constant="20" id="DXo-rH-p29"/>
                             <constraint firstItem="YgY-yP-OwS" firstAttribute="leading" secondItem="RMo-cB-zcu" secondAttribute="leading" constant="5" id="FAq-ad-euO"/>
@@ -269,6 +270,9 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ApL-j3-Zzi">
                                             <rect key="frame" x="6" y="5" width="50" height="50"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <bool key="isElement" value="YES"/>
+                                            </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="QeK-uZ-ha1"/>
                                                 <constraint firstAttribute="width" constant="50" id="ceO-pv-WFN"/>
@@ -299,6 +303,9 @@
                                         <constraint firstItem="ApL-j3-Zzi" firstAttribute="top" secondItem="6WH-b3-Nqc" secondAttribute="top" priority="999" constant="5" id="uf4-AY-kp8"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="avatarImageView" destination="ApL-j3-Zzi" id="W7n-3z-ppC"/>
                                     <outlet property="emailLabel" destination="GUY-po-UfK" id="Gjd-wj-HpN"/>

@@ -2,7 +2,7 @@
 
 I decided to create the project using Swift as a self training exercise since I have not developed any project using Swift.
 The Git commits have not been made in a good way because I thought I would redo all the project but then it you would have been weird to make all the commits in a minute so I decided to keep the way I did.
-For the UI, I used the storyboard and created some custom cells for the tableView.
+For the UI, I used the storyboard and created some custom cells for the tableView. I used AutoLayout for constraints.
 I added a very simple function for cache images and I keep the last content I retrieved for the list of authors.
 I decided not to use any third party librairies.
 
@@ -15,4 +15,4 @@ Many things could be improved:
 * Code for cache retrieved from https://medium.com/@sdrzn/swift-4-codable-lets-make-things-even-easier-c793b6cf29e1. With more time, I would have prefered to put the cache using CoreData  
 * handle errors with messages and the different type of errors (timeout, connectivity....)
 * Add priority for network request
-
+* Unit tests should be improved as well as the code coverage.
